@@ -2,26 +2,76 @@
 layout: default
 ---
 
-<section class="hero">
-    <div>
-        <h1 class="parallax-text">Arquitetura.<br>Lógica.<br>Execução.</h1>
-        <p class="parallax-text" style="color: #888; font-size: 1.2rem;">Engenharia de Software & Algoritmos Avançados</p>
+<div class="preloader" id="preloader">
+    <div class="preloader__top">
+        <span>Victor Iorio</span>
+        <span>Portfolio / 2026</span>
     </div>
-</section>
+    <div class="preloader__count" id="pl-count">0</div>
+    <div class="preloader__bar"><span id="pl-bar"></span></div>
+</div>
 
-<section>
-    <h2 class="parallax-text" style="font-size: 2.5rem; border-bottom: 1px solid #333; padding-bottom: 1rem;">Repositórios</h2>
-    <div class="repositories">
-        {% for repo in site.github.public_repositories %}
-            {% if repo.name != "viorio.github.io" %}
-            <div class="repo-card parallax-card">
-                <a href="{{ repo.html_url }}" target="_blank" class="repo-name">{{ repo.name }}</a>
-                <p style="color: #aaa; font-size: 0.9rem; margin-top: 1rem;">{{ repo.description | default: "Nenhuma descrição fornecida." }}</p>
-                <div style="margin-top: 1.5rem; font-family: monospace; color: #666;">
-                    {{ repo.language | default: "Multi" }}
-                </div>
+<div class="progress"><span class="progress__bar" id="progress-bar"></span></div>
+
+<main>
+    <section class="hero" id="hero">
+        <div class="hero__meta">
+            <span><i class="dot"></i> Available for work</span>
+            <a href="https://github.com/vicode360" target="_blank" rel="noopener" class="hero__github" data-magnetic>GitHub &#8599;</a>
+        </div>
+        <h1 class="hero__title">
+            <span class="line"><span class="word">Victor</span></span>
+            <span class="line"><span class="word">Iorio</span></span>
+        </h1>
+        <p class="hero__tag">Computer Science Undergraduate at UFF.</p>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="projects__intro">
+            <div class="section__head">
+                <span class="section__index">( 01 )</span>
+                <h2 class="section__title">Projects</h2>
             </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</section>
+        </div>
+        <div class="cardstack">
+            <a class="pcard" href="https://github.com/vicode360/sistema-gefin" target="_blank" rel="noopener" data-magnetic>
+                <div class="pcard__inner">
+                    <div class="pcard__head"><span>01 / 04</span><span>Python</span></div>
+                    <h3 class="pcard__name">Gefin.</h3>
+                    <p class="pcard__desc">Complete financial management system with a modern interface.</p>
+                    <span class="pcard__link">View on GitHub &#8599;</span>
+                </div>
+            </a>
+            <a class="pcard" href="https://github.com/vicode360/AllegroProg2" target="_blank" rel="noopener" data-magnetic>
+                <div class="pcard__inner">
+                    <div class="pcard__head"><span>02 / 04</span><span>C</span></div>
+                    <h3 class="pcard__name">Allegro C Game.</h3>
+                    <p class="pcard__desc">C Game using Allegro library and PokeAPI.</p>
+                    <span class="pcard__link">View on GitHub &#8599;</span>
+                </div>
+            </a>
+            <a class="pcard" href="https://github.com/vicode360/EscalonarMatriz" target="_blank" rel="noopener" data-magnetic>
+                <div class="pcard__inner">
+                    <div class="pcard__head"><span>03 / 04</span><span>C</span></div>
+                    <h3 class="pcard__name">Matrix Scaling.</h3>
+                    <p class="pcard__desc">Matrix scaling via Gaussian elimination.</p>
+                    <span class="pcard__link">View on GitHub &#8599;</span>
+                </div>
+            </a>
+            <a class="pcard" href="#" data-magnetic>
+                <div class="pcard__inner">
+                    <div class="pcard__head"><span>04 / 04</span><span>—</span></div>
+                    <h3 class="pcard__name">Soon</h3>
+                    <p class="pcard__desc">New projects in development.</p>
+                    <span class="pcard__link">Stay tuned &#8599;</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__row">
+            <div class="footer__meta">© 2026 — Built from scratch</div>
+        </div>
+    </footer>
+</main>
