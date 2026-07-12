@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<section class="hero">
+    <div>
+        <h1 class="parallax-text">Arquitetura.<br>Lógica.<br>Execução.</h1>
+        <p class="parallax-text" style="color: #888; font-size: 1.2rem;">Engenharia de Software & Algoritmos Avançados</p>
+    </div>
+</section>
+
+<section>
+    <h2 class="parallax-text" style="font-size: 2.5rem; border-bottom: 1px solid #333; padding-bottom: 1rem;">Repositórios</h2>
+    <div class="repositories">
+        {% for repo in site.github.public_repositories %}
+            {% if repo.name != "viorio.github.io" %}
+            <div class="repo-card parallax-card">
+                <a href="{{ repo.html_url }}" target="_blank" class="repo-name">{{ repo.name }}</a>
+                <p style="color: #aaa; font-size: 0.9rem; margin-top: 1rem;">{{ repo.description | default: "Nenhuma descrição fornecida." }}</p>
+                <div style="margin-top: 1.5rem; font-family: monospace; color: #666;">
+                    {{ repo.language | default: "Multi" }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
