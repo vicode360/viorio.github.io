@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: #050505; color: #ffffff; font-family: 'Helvetica Neue', sans-serif; overflow-x: hidden; }
+        canvas { position: fixed; top: 0; left: 0; z-index: -1; }
+        .content { position: relative; z-index: 1; padding: 10vh 10vw; }
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: flex-start; }
+        h1 { font-size: 4rem; font-weight: 300; letter-spacing: -2px; }
+        .repositories { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 10vh; }
+        .repo-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 2rem; backdrop-filter: blur(10px); transition: transform 0.3s ease; }
+        .repo-card:hover { transform: translateY(-10px); border-color: rgba(255, 255, 255, 0.3); }
+        .repo-name { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="content">
+        {{ content }}
+    </div>
+
+    <!-- libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
